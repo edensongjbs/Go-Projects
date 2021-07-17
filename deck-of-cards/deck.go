@@ -13,14 +13,14 @@ func (d deck) print() {
 func newDeck() deck {
 	cards := deck{}
 
-	cardSuits := []string {
+	cardSuits := []string{
 		"Hearts",
 		"Diamonds",
 		"Spades",
 		"Clubs",
 	}
 
-	cardValues := []string {
+	cardValues := []string{
 		"Ace",
 		"Two",
 		"Three",
@@ -43,4 +43,8 @@ func newDeck() deck {
 	}
 
 	return cards
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

@@ -7,7 +7,8 @@ func main() {
 	// cards = append(cards, "Six of Spades")
 	cards.print()
 
-	fmt.Println(cards)
+	hand, remainingDeck := deal(cards, 5)
+	fmt.Println(hand, remainingDeck)
 }
 
 // func newCard() string {
