@@ -18,14 +18,14 @@ func (d deck) print() {
 func newDeck() deck {
 	cards := deck{}
 
-	cardSuits := []string {
+	cardSuits := []string{
 		"Hearts",
 		"Diamonds",
 		"Spades",
 		"Clubs",
 	}
 
-	cardValues := []string {
+	cardValues := []string{
 		"Ace",
 		"Two",
 		"Three",
@@ -50,6 +50,7 @@ func newDeck() deck {
 	return cards
 }
 
+<<<<<<< HEAD
 func (d deck) saveToFile() {
 
 }
@@ -57,3 +58,8 @@ func (d deck) saveToFile() {
 func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
 }
+=======
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+>>>>>>> 802793cb82ced3deae69d38fddd3dcadf84fe768
