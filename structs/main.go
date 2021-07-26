@@ -28,7 +28,8 @@ func main() {
 	fmt.Printf("%+v", alex)
 	jim := person{"Jim", "Party", contactInfo{"jimparty@gmail.com", 11029,},}
 	jim.print()
-	jimPointer := &jim
-	jimPointer.updateName("jimmy")
+	// jimPointer := &jim
+	//jimPointer.updateName("jimmy")
+	jim.updateName("Jimmy")
 	jim.print()
 }
