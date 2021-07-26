@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	cards := newDeck()
+	//cards := newDeck()
+	cards := newDeckFromFile("test-deck.txt")
 	// cards = append(cards, "Six of Spades")
-	cards.print()
+	// cards.print()
 
-	fmt.Println(cards.toString())
-	cards.saveToFile("test-deck.txt")
+	// fmt.Println(cards.toString())
+	// cards.saveToFile("test-deck.txt")
 	hand, remainingDeck := deal(cards, 5)
 	fmt.Println(hand, remainingDeck)
 }
