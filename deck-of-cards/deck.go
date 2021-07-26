@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"strings"
 )
 
@@ -50,16 +51,14 @@ func newDeck() deck {
 	return cards
 }
 
-<<<<<<< HEAD
-func (d deck) saveToFile() {
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
 
+func (d deck) saveToFile(fileName string) error {
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
 
 func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
 }
-=======
-func deal(d deck, handSize int) (deck, deck) {
-	return d[:handSize], d[handSize:]
-}
->>>>>>> 802793cb82ced3deae69d38fddd3dcadf84fe768
