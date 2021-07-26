@@ -7,7 +7,7 @@ func main() {
 	// cards = append(cards, "Six of Spades")
 	cards.print()
 
-	fmt.Println(cards)
+	fmt.Println(cards.toString())
 }
 
 // func newCard() string {
