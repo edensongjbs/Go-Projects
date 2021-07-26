@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	//cards := newDeck()
 	cards := newDeckFromFile("test-deck.txt")
+	cards.shuffle()
 	// cards = append(cards, "Six of Spades")
 	// cards.print()
 
